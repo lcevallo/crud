@@ -1,0 +1,117 @@
+GET http://localhost:8080/producto/lista
+
+###
+GET http://localhost:8080/producto/detail/1
+
+###
+POST http://localhost:8080/producto/create/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsY2V2YWxsbyIsImlhdCI6MTU5NDk5OTQ4NSwiZXhwIjoxNTk1MDM1NDg1fQ.MYQVyqjinQgoDPXqlb20zIWaXG1zMVSIqKysgOiUj-6ERkMPlvnd_r31lugonX4SG_dsv7gQ6EYxGTamcOSBqw
+
+{
+    "nombre": "Producto 1",
+    "precio":100
+}
+
+###
+POST http://localhost:8080/producto/create/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsY2V2YWxsbyIsImlhdCI6MTU5NDk5OTQ4NSwiZXhwIjoxNTk1MDM1NDg1fQ.MYQVyqjinQgoDPXqlb20zIWaXG1zMVSIqKysgOiUj-6ERkMPlvnd_r31lugonX4SG_dsv7gQ6EYxGTamcOSBqw
+
+{
+    "nombre": "Producto 2",
+    "precio": 45.6
+}
+
+
+###
+POST http://localhost:8080/producto/create/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsY2V2YWxsbyIsImlhdCI6MTU5NDk5OTQ4NSwiZXhwIjoxNTk1MDM1NDg1fQ.MYQVyqjinQgoDPXqlb20zIWaXG1zMVSIqKysgOiUj-6ERkMPlvnd_r31lugonX4SG_dsv7gQ6EYxGTamcOSBqw
+
+{
+    "nombre": "Producto 3",
+    "precio": 125.6
+}
+
+###
+PUT http://localhost:8080/producto/update/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Producto 2",
+    "precio": 48.6
+}
+
+###
+DELETE http://localhost:8080/producto/delete/2
+
+
+###
+POST http://localhost:8080/producto/create/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Producto 2",
+    "precio": 48
+}
+
+
+###
+POST http://localhost:8080/auth/nuevo/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Luis Cevallos",
+    "nombreUsuario": "lcevallo",
+    "email": "lcevallo@gmail.com",
+    "password": "admin",
+    "roles": ["admin"]
+}
+
+###
+POST http://localhost:8080/auth/nuevo/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "user",
+    "nombreUsuario": "user",
+    "email": "user@u.u",
+    "password": "user"
+}
+
+###
+POST http://localhost:8080/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreUsuario": "lcevallo",
+    "password": "admin"
+}
+
+###
+POST http://localhost:8080/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreUsuario": "user",
+    "password": "user"
+}
+
+
+
+### 
+GET http://localhost:8080/producto/lista
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNTk0OTk5MTMyLCJleHAiOjE1OTUwMzUxMzJ9.SudxGax0xjaWD1rkqdCRT6AZofq2xYxxSdqIg7kEnlRA9yr1EQTE5pBiw-1Aw6ATKRsYzV50iUqvEynrPkk1rg
+
+
+###
+PUT http://localhost:8080/producto/update/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsY2V2YWxsbyIsImlhdCI6MTU5NDk5OTQ4NSwiZXhwIjoxNTk1MDM1NDg1fQ.MYQVyqjinQgoDPXqlb20zIWaXG1zMVSIqKysgOiUj-6ERkMPlvnd_r31lugonX4SG_dsv7gQ6EYxGTamcOSBqw
+
+{
+    "nombre": "Producto 2",
+    "precio": 48.6
+}
+
